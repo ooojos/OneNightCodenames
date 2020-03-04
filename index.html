@@ -59,7 +59,12 @@
 		document.getElementById("numbers").innerHTML = numbers;
 	
 		for(i = 0; i < 9; i++){
-			words[i] = wordsList[Math.floor(Math.random()*wordsList.length)]; 
+			if(numbers.includes(i)){
+				words[i] = "<p style=\"color:red\">" + wordsList[Math.floor(Math.random()*wordsList.length)] + "</p>";
+			}
+			else{
+				words[i] = wordsList[Math.floor(Math.random()*wordsList.length);
+			}
 		}
 		
 		//document.getElementById("wordGrid").innerHTML = words;
